@@ -1,0 +1,122 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png?v=lkg823JOG0">
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png?v=lkg823JOG0" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png?v=lkg823JOG0" sizes="16x16">
+    <link rel="manifest" href="favicons/manifest.json?v=lkg823JOG0">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg?v=lkg823JOG0" color="#112e51">
+    <link rel="shortcut icon" href="favicons/favicon.ico?v=lkg823JOG0">
+    <meta name="apple-mobile-web-app-title" content="Digital44">
+    <meta name="application-name" content="Digital44">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml?v=lkg823JOG0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Digital44</title>
+
+    <style>
+      body {
+        overflow: hidden;
+      }
+
+      .page-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        transition: opacity 1s;
+      }
+
+      .image-half-container {
+        perspective: 200vh;
+        display: block;
+        position: relative;
+        width: 80vw;
+        height: 80vw;
+        max-width: 80vh;
+        max-height: 80vh;
+        transition: opacity 1s;
+        opacity: 0;
+      }
+
+      .image-half {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        transition: transform 2.5s;
+        transform-style: preserve-3d;
+        background-size: 200%;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cGF0aCBmaWxsPSIjRUQ0QzVDIiBkPSJNNDcuOTcxIDYuNjA5QTI5Ljg0OCAyOS44NDggMCAwIDAgMzIgMnY0LjYxaDE1Ljk3MXoiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMzIgMTEuMjE5aDIxLjYyNWEzMC4xNyAzMC4xNyAwIDAgMC01LjY1NC00LjYxSDMydjQuNjF6Ii8+PHBhdGggZmlsbD0iI0VENEM1QyIgZD0iTTMyIDE1LjgyOWgyNS4yNjJhMzAuMDI3IDMwLjAyNyAwIDAgMC0zLjYzNy00LjYxSDMydjQuNjF6Ii8+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTMyIDIwLjQzOWgyNy42ODhhMjkuNzE4IDI5LjcxOCAwIDAgMC0yLjQyNi00LjYxSDMydjQuNjF6Ii8+PHBhdGggZmlsbD0iI0VENEM1QyIgZD0iTTMyIDI1LjA0OWgyOS4xODJhMjkuNzU2IDI5Ljc1NiAwIDAgMC0xLjQ5NC00LjYxSDMydjQuNjF6Ii8+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTMyIDI5LjY1OWgyOS45YTI5Ljc3NyAyOS43NzcgMCAwIDAtLjcxOS00LjYxSDMydjQuNjF6Ii8+PHBhdGggZmlsbD0iI0VENEM1QyIgZD0iTTYxLjkgMjkuNjU5SDMyVjMySDJjMCAuNzY0LjAzNyAxLjUxOS4wOTQgMi4yN2g1OS44MTNjLjA1NC0uNzUxLjA5My0xLjUwNi4wOTMtMi4yNyAwLS43ODktLjA0MS0xLjU2OC0uMS0yLjM0MXoiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMi44MDEgMzguODc5aDU4LjM5NmMuMzUyLTEuNDk2LjU5LTMuMDM3LjcwOS00LjYwOUgyLjA5NGMuMTE3IDEuNTcyLjM1NSAzLjExMy43MDcgNC42MDl6Ii8+PHBhdGggZmlsbD0iI0VENEM1QyIgZD0iTTQuMjgzIDQzLjQ4OGg1NS40MzRhMjkuOTE2IDI5LjkxNiAwIDAgMCAxLjQ4LTQuNjA5SDIuODAxYTI5LjcwNiAyOS43MDYgMCAwIDAgMS40ODIgNC42MDl6Ii8+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTYuNjkxIDQ4LjA5OGg1MC42MTdhMzAuMDExIDMwLjAxMSAwIDAgMCAyLjQwOC00LjYwOUg0LjI4M2EyOS45MjMgMjkuOTIzIDAgMCAwIDIuNDA4IDQuNjA5eiIvPjxwYXRoIGZpbGw9IiNFRDRDNUMiIGQ9Ik0xMC4zMDUgNTIuNzA5aDQzLjM4OWEzMC4xMDQgMzAuMTA0IDAgMCAwIDMuNjE1LTQuNjExSDYuNjkxYTMwLjI4NSAzMC4yODUgMCAwIDAgMy42MTQgNC42MTF6Ii8+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTE1LjkxNiA1Ny4zMThoMzIuMTY4YTMwLjIxNiAzMC4yMTYgMCAwIDAgNS42MDktNC42MDlIMTAuMzA1YTMwLjE1NyAzMC4xNTcgMCAwIDAgNS42MTEgNC42MDl6Ii8+PHBhdGggZmlsbD0iI0VENEM1QyIgZD0iTTMyIDYyYzUuOTIgMCAxMS40MzQtMS43MjMgMTYuMDg0LTQuNjgySDE1LjkxNkEyOS44NTMgMjkuODUzIDAgMCAwIDMyIDYyeiIvPjxwYXRoIGZpbGw9IiM0MjhCQzEiIGQ9Ik0xNi4wMjcgNi42MDlBMzAuMTYzIDMwLjE2MyAwIDAgMCA0LjMxIDIwLjQzOWEyOS44OTUgMjkuODk1IDAgMCAwLTEuNDkyIDQuNjEgMjkuODk3IDI5Ljg5NyAwIDAgMC0uNzE5IDQuNjFDMi4wMzkgMzAuNDMyIDIgMzEuMjExIDIgMzJoMzBWMmEyOS44NTUgMjkuODU1IDAgMCAwLTE1Ljk3MyA0LjYwOXoiLz48Zz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMjUgM2wuNDczIDEuNDgxSDI3bC0xLjIzNi45OC40NzIgMS41MTUtMS4yMzYtLjlMMjMuNzY0IDdsLjQ3Mi0xLjU0MkwyMyA0LjQ4MWgxLjUyN3oiLz48ZyBmaWxsPSIjRkZGIj48cGF0aCBkPSJNMjkgOWwuNDczIDEuNDgxSDMxbC0xLjIzNi45OC40NzIgMS41MTUtMS4yMzYtLjktMS4yMzYuOTI0LjQ3Mi0xLjU0MkwyNyAxMC40ODFoMS41Mjd6TTIxIDlsLjQ3MyAxLjQ4MUgyM2wtMS4yMzYuOTguNDcyIDEuNTE1LTEuMjM2LS45LTEuMjM2LjkyNC40NzItMS41NDJMMTkgMTAuNDgxaDEuNTI3eiIvPjwvZz48ZyBmaWxsPSIjRkZGIj48cGF0aCBkPSJNMjUgMTVsLjQ3MyAxLjQ4MUgyN2wtMS4yMzYuOTguNDcyIDEuNTE1LTEuMjM2LS45LTEuMjM2LjkyNC40NzItMS41NDJMMjMgMTYuNDgxaDEuNTI3ek0xNyAxNWwuNDczIDEuNDgxSDE5bC0xLjIzNi45OC40NzIgMS41MTUtMS4yMzYtLjktMS4yMzYuOTI0LjQ3Mi0xLjU0MkwxNSAxNi40ODFoMS41Mjd6TTkgMTVsLjQ3MyAxLjQ4MUgxMWwtMS4yMzYuOTguNDcyIDEuNTE1LTEuMjM2LS45TDcuNzY0IDE5bC40NzItMS41NDJMNyAxNi40ODFoMS41Mjd6Ii8+PC9nPjxnIGZpbGw9IiNGRkYiPjxwYXRoIGQ9Ik0yOSAyMWwuNDczIDEuNDgxSDMxbC0xLjIzNi45OC40NzIgMS41MTUtMS4yMzYtLjktMS4yMzYuOTI0LjQ3Mi0xLjU0MkwyNyAyMi40ODFoMS41Mjd6TTIxIDIxbC40NzMgMS40ODFIMjNsLTEuMjM2Ljk4LjQ3MiAxLjUxNS0xLjIzNi0uOS0xLjIzNi45MjQuNDcyLTEuNTQyTDE5IDIyLjQ4MWgxLjUyN3pNMTMgMjFsLjQ3MyAxLjQ4MUgxNWwtMS4yMzYuOTguNDcyIDEuNTE1LTEuMjM2LS45LTEuMjM2LjkyNC40NzItMS41NDJMMTEgMjIuNDgxaDEuNTI3eiIvPjwvZz48ZyBmaWxsPSIjRkZGIj48cGF0aCBkPSJNMjUgMjdsLjQ3MyAxLjQ4MkgyN2wtMS4yMzYuOTc5LjQ3MiAxLjUxNS0xLjIzNi0uOS0xLjIzNi45MjQuNDcyLTEuNTQyTDIzIDI4LjQ4MmgxLjUyN3pNMTcgMjdsLjQ3MyAxLjQ4MkgxOWwtMS4yMzYuOTc5LjQ3MiAxLjUxNS0xLjIzNi0uOS0xLjIzNi45MjQuNDcyLTEuNTQyTDE1IDI4LjQ4MmgxLjUyN3pNOSAyN2wuNDczIDEuNDgySDExbC0xLjIzNi45NzkuNDcyIDEuNTE1LTEuMjM2LS45TDcuNzY0IDMxbC40NzItMS41NDJMNyAyOC40ODJoMS41Mjd6Ii8+PC9nPjxnIGZpbGw9IiNGRkYiPjxwYXRoIGQ9Ik0xMS43NjQgMTNMMTMgMTIuMDc2bDEuMjM2Ljg5OS0uNDczLTEuNTE0IDEuMjM3LS45OGgtMS41MjdMMTMgOWwtLjQ3MyAxLjQ4MmgtMS40MjJsLS4wNDcuMDQ2IDEuMTc4LjkzMUwxMS43NjQgMTN6TTMuNzY0IDI1TDUgMjQuMDc2bDEuMjM2Ljg5OS0uNDczLTEuNTE0TDcgMjIuNDgxSDUuNDczTDUgMjFsLS40NzMgMS40ODJoLS45NzZjLS4wMzkuMTE1LS4wOC4yMjgtLjExNy4zNDNsLjgwMy42MzNMMy43NjQgMjV6Ii8+PC9nPjwvZz48L3N2Zz4=);
+      }
+
+      .image-half.left {
+        transform: rotate3d(0, 1, 0, 90deg);
+        transform-origin: center right 0;
+        background-position: left;
+        left: 0;
+      }
+
+      .image-half.right {
+        transform: rotate3d(0, -1, 0, 90deg);
+        transform-origin: center left 0;
+        background-position: right;
+        right: 1px;
+      }
+
+      .image-half.unfolded {
+        transform: rotate3d(0, 0, 0, 0);
+      }
+
+      .transparent {
+        opacity: 0;
+      }
+
+      .opaque {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="image-half-container">
+        <div class="image-half left"></div>
+        <div class="image-half right"></div>
+      </div>
+    </div>
+    <script>
+      function unfold() {
+        var a = document.getElementsByClassName('image-half');
+        for (var i = 0; i < a.length; i++) {
+          a[i].className += ' unfolded';
+        }
+      }
+
+      function fadeIn() {
+        var container = document.getElementsByClassName('image-half-container')[0];
+        container.className += ' opaque';
+      }
+
+      function fadeOut() {
+        var container = document.getElementsByClassName('page-container')[0];
+        container.className += ' transparent';
+      }
+
+      function redirect() {
+        window.location = 'https://obamawhitehouse.archives.gov';
+      }
+
+      function init() {
+        window.setTimeout(fadeIn,      0);
+        window.setTimeout(unfold,      0);
+        window.setTimeout(fadeOut,  3000);
+        window.setTimeout(redirect, 4000);
+      }
+
+      window.onload = init;
+    </script>
+  </body>
+</html>
